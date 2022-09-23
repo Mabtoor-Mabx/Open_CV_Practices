@@ -15,7 +15,7 @@ if(cap.isOpened()==False):
 
 frame_width = int(cap.get(3))
 frame_height = int(cap.get(4))
-out = cv.VideoWriter('Resources/output_video.mp4', cv.VideoWriter_fourcc('M','J','P','G'), 15, (frame_width, frame_height))
+out = cv.VideoWriter('Resources/output_video.avi', cv.VideoWriter_fourcc('M','J','P','G'), 9, (frame_width, frame_height))
 
 # Playing Video Frame By Frame
 
@@ -32,4 +32,5 @@ while(True):
 
 
 cap.release()
+out.release()
 cv.destroyAllWindows()
